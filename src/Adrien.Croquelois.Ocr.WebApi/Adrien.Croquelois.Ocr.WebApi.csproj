@@ -8,4 +8,8 @@
     <ProjectReference Include="..\Adrien.Croquelois.Ocr\Adrien.Croquelois.Ocr.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.1" />
+  </ItemGroup>
+
 </Project>
