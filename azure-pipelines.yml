@@ -25,4 +25,4 @@ steps:
     displayName: "publish artifact"
     inputs:
         pathToPublish: '$(Build.ArtifactStagingDirectory)'
-        artifactName: Adrien.Croquelois.Ocr.exe
+        artifactName: Adrien.Croquelois.Ocr
