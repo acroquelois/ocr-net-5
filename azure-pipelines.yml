@@ -16,7 +16,7 @@ steps:
     displayName: "publish"
     inputs:
       command: publish
-      arguments: "--configuration $(BuildConfiguration) --self-contained true --output $(Build.ArtifactStagingDirectory) -r win-x64 /p:PublishSingleFile=true"
-      projects: '**/Demo.csproj'
+      arguments: "-r win-x64 --self-contained=true /p:PublishSingleFile=true /p:IncludeNativeLibrariesInSingleFile=true --output $(Build.ArtifactStagingDirectory)"
+      projects: '**/*Console.csproj'
       publishWebProjects: false
       zipAfterPublish: true
