@@ -13,7 +13,7 @@ steps:
       projects: "**tests/*Tests.csproj"
 
   - task: DotNetCoreCLI@2
-    displayName: "publish"
+    displayName: "dotnet publish"
     inputs:
       command: publish
       arguments: "-r win-x64 --self-contained=true /p:PublishSingleFile=true /p:IncludeNativeLibrariesInSingleFile=true --output $(Build.ArtifactStagingDirectory)"
@@ -22,6 +22,7 @@ steps:
       zipAfterPublish: true
    
   - task: PublishBuildArtifacts@1
+    displayName: "publish artifact"
     inputs:
         pathToPublish: '$(Build.ArtifactStagingDirectory)'
         artifactName: Adrien.Croquelois.Ocr.exe
