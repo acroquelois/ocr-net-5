@@ -20,3 +20,8 @@ steps:
       projects: '**/*Console.csproj'
       publishWebProjects: false
       zipAfterPublish: true
+   
+  - task: PublishBuildArtifacts@1
+    inputs:
+        pathToPublish: '$(Build.ArtifactStagingDirectory)'
+        artifactName: Adrien.Croquelois.Ocr.exe
