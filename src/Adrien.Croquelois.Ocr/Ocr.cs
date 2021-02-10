@@ -1,5 +1,4 @@
-﻿using System;
-using Tesseract;
+﻿using Tesseract;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -29,21 +28,6 @@ namespace Adrien.Croquelois.Ocr
             }));
             await Task.WhenAll(tasks);
             return ocrResult;
-            // foreach (var image in images)
-            // {
-            //     var executingAssemblyPath = Assembly.GetExecutingAssembly().Location;
-            //     var executingPath = Path.GetDirectoryName(executingAssemblyPath);
-            //     using var engine = new TesseractEngine(Path.Combine(executingPath,
-            //         @"tessdata"), "fra", EngineMode.Default);
-            //     using var pix = Pix.LoadFromMemory(image);
-            //     var page = engine.Process(pix);
-            //     ocrResult.Add(new OcrResult()
-            //     {
-            //         Text = page.GetText(),
-            //         Confidence = page.GetMeanConfidence()
-            //     });
-            // }
-            // return Task.FromResult(ocrResult);
         }
     }
 }
