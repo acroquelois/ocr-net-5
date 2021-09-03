@@ -1,0 +1,15 @@
+pr:
+  - master
+pool:
+  vmImage: "Ubuntu 16.04"
+steps:
+  - task: DotNetCoreInstaller@0
+    displayName: "Use .NET 5"
+    inputs:
+      version: 5.0.101
+      
+  - task: DotNetCoreCLI@2
+    displayName: "dotnet test"
+    inputs:
+      command: test
+      projects: "**tests/*Tests.csproj"
